@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-screen">
+        <h2>Welcome to ChatHub</h2>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button onclick="login()">Join Chat</button>
+    </div>
+
+    <div id="chat-container" class="hidden">
+        <header>
+            <h2>ChatHub</h2>
+            <button onclick="toggleDarkMode()">🌙</button>
+        </header>
+        <div id="chat-box"></div>
+        <div id="typing-indicator" class="hidden">Someone is typing...</div>
+        <div class="message-input">
+            <input type="text" id="message-input" placeholder="Type a message..." oninput="showTyping()">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
